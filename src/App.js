@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import NavMenu from './NavMenu'
+const nav = [
+  {
+    text: 'Home',
+    link: '#1',
+    active:true,
+    
+  },
+  {
+    text: 'Services',
+    link: '#2',
+    active: false,
+    list: ['For entrepreneurs', 'For students','For hobbyists']
+  },
+  {
+    text: 'Contact',
+    link: '#3',
+    active: false,
+    
+  }
+]
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  <div>
+    <NavMenu items={nav}  />
+
+  </div>
+   
+  )
 }
 
 export default App;
